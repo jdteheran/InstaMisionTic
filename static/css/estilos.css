@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "insta-font";
+  src: url("../font/FontsFree-Net-Billabong");
+  src: url("../font/FontsFree-Net-Billabong.ttf?uvesm8") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "titillium";
+  src: url("../font/TitilliumWeb-Regular");
+  src: url("../font/TitilliumWeb-Regular.ttf?uvesm8") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  font-family: "titillium";
+  background: #f0f0f0;
+  color: #444;
+}
+
+.contenedor,
+.contenedor-registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contenedor-registro {
+  margin-top: 50px !important;
+}
+
+.inicio-sesion,
+.formulario-registro {
+  padding: 50px 40px 70px 40px;
+  border: 1px solid #444;
+  background: white;
+  border-radius: 10px;
+}
+
+.inicio-sesion h1,
+.formulario-registro h1 {
+  font-family: "insta-font";
+  font-size: 70px;
+  margin: 0px;
+  color: black;
+}
+
+.inicio-sesion form,
+.formulario-registro form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.inicio-sesion form input,
+.formulario-registro form input {
+  width: 80%;
+  height: 35px;
+  margin-top: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.inicio-sesion form input[type="password"],
+.formulario-registro form input[type="password"] {
+  width: 70%;
+}
+
+.inicio-sesion form input[type="submit"],
+.formulario-registro form input[type="submit"] {
+  width: 50%;
+  margin-top: 15px;
+  height: 35px;
+  text-indent: 0px;
+}
+
+.registro,
+.regresar {
+  padding: 10px 40px 10px 40px;
+  margin-top: 10px;
+  border: 1px solid #444;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.registro p span,
+.regresar p span {
+  font-weight: bold;
+  color: black;
+}
+
+.registro p span:hover,
+.regresar p span:hover,
+.inicio-sesion form input[type="submit"]:hover,
+.formulario-registro form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.inicio-sesion h1:hover,
+.formulario-registro h1:hover {
+  cursor: default;
+}
+
+form img {
+  width: 30px;
+  margin-bottom: -8px;
+}
+
+form img:hover {
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid #444;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.57);
+}
+
+.encabezado .logo,
+.encabezado .buscador,
+.encabezado .salir {
+  display: inline-block;
+  width: 30%;
+}
+
+.encabezado .logo h2 {
+  font-family: "insta-font";
+  font-size: 50px;
+  cursor: pointer;
+  margin: 10px 0px 10px 0px;
+}
+
+.buscador img {
+  width: 25px;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+.buscador input {
+  height: 30px;
+  width: 80%;
+  text-indent: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+.salir input {
+  width: 40%;
+  height: 35px;
+  text-indent: 0px;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+.salir input:hover {
+  cursor: pointer;
+}
+
+.perfil {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 70%;
+}
+
+.perfil .info-perfil {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.perfil .info-perfil .avatar img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.perfil .info-perfil .avatar {
+  margin-right: 20px;
+}
+
+.perfil .info-perfil .usuario {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.galeria {
+  border-top: 1px solid #444;
+  margin-top: 60px;
+}
+
+.galeria ul li {
+  display: inline-block;
+}
+
+.galeria ul li img {
+  width: 200px;
+  height: 200px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.agregar-foto .boton-agregar-foto {
+  border: 1px solid #444;
+  padding: 0px 20px 0px 20px;
+  border-radius: 50%;
+  float: right;
+  background-color: #444;
+  color: white;
+}
+
+.agregar-foto .boton-agregar-foto:hover {
+  cursor: pointer;
+}
+
+#ingreso_imagen {
+  display: none;
+}

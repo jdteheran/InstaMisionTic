@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+{% if usuario %}
+<title>{{ usuario[0][1] }} - InstaMisionTic</title>
+{% endif %}
+{% endblock %}
+
+{% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/estilos.css') }}"
+/>
+{% endblock %}
+
+{% block contenido %}
+<header>
+    <div class="encabezado">
+        <div class="logo">
+            <h2>InstaMisionTic</h2>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="buscar" name="usuario" id="input_usuario">
+            <img src="{{ url_for('static', filename='img/search.png') }}" alt="" id="buscar_usuario">
+        </div>
+        <div class="salir">
+            <input type="button" value="Cerrar Sesion" id="cerrar_sesion">
+        </div>
+    </div>
+</header>
+<section class="perfil">
+    <div class="info-perfil">
+        <div class="avatar">
+            <img src="{{ url_for('static', filename='img/avatar.jpg') }}" alt="">
+        </div>
+        <div class="usuario">
+            {% if usuario %}
+            <h3>{{ usuario[0][1] }}</h3>
+            {% endif %}
+        </div>
+    </div>
+    {% if agregar %}
+    <div class="agregar-foto">
+        <div class="boton-agregar-foto">
+            <p>+</p>
+        </div>
+        <input type="file" name="imagen" id="ingreso_imagen" accept="image/*"/>
+    </div>
+    {% endif %}
+    <div class="galeria">
+        <ul>
+            {% for item in registro_imagenes %}
+            <li><img src="{{ url_for('render_imagen', id = item[0]) }}" alt=""></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %} 
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block titulo %}
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/global-network.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    {% block contenido %}
+    {% endblock %}
+</body>
+    {% block scripts%}
+    {% endblock %}
+</html>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<title>Inicio Sesion - InstaMisionTic</title>
+{% endblock %} {% block css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/estilos.css') }}"
+/>
+{% endblock %} {% block contenido %}
+<section class="contenedor">
+  <div class="portada">
+    <div class="inicio-sesion">
+      <h1>InstaMisionTic</h1>
+      <form action="/" method="post">
+        <div>
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Usuario"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            name="contrasena"
+            id="contrasena"
+            placeholder="Contraseña"
+          />
+          <img
+            src="{{ url_for('static', filename='img/view.png') }}"
+            alt="Mostrar contraseña"
+            id="vision"
+          />
+        </div>
+        <input type="submit" value="Iniciar Sesion" />
+      </form>
+    </div>
+    <div class="registro">
+      <p>
+        No tienes cuenta?
+        <span> Reigstrate </span>
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/inicio_sesion.js') }}"></script>
+{% endblock %}
